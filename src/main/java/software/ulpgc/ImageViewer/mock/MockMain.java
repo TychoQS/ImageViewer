@@ -1,6 +1,6 @@
 package software.ulpgc.ImageViewer.mock;
 
-import software.ulpgc.ImageViewer.ViewPort;
+import software.ulpgc.ImageViewer.view.ViewPort;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
