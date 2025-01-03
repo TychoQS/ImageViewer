@@ -11,6 +11,8 @@ import java.util.Map;
 
 public class SwingMainFrame extends JFrame {
     public static final String TITLE = "ImageViewer";
+    public static final String NEXT_COMMAND = "next";
+    public static final String PREVIOUS_COMMAND = "previous";
     private final FileImageLoader loader;
     private SwingImageDisplay imageDisplay;
     private final Map<String, Command> commands;
@@ -48,13 +50,13 @@ public class SwingMainFrame extends JFrame {
 
     private Component createNextButtonPanel() {
         JButton button = new JButton(">");
-        button.addActionListener(e -> System.out.println("MOCK IMPLEMENTATION"));
+        button.addActionListener(e -> commands.get(NEXT_COMMAND).execute());
         return button;
     }
 
     private Component createPreviousButtonPanel() {
         JButton button = new JButton("<");
-        button.addActionListener(e -> System.out.println("MOCK IMPLEMENTATION"));
+        button.addActionListener(e -> commands.get(PREVIOUS_COMMAND).execute());
         return button;
     }
 
