@@ -1,19 +1,24 @@
 package software.ulpgc.ImageViewer.app.swing;
 
+import software.ulpgc.ImageViewer.architecture.control.Command;
 import software.ulpgc.ImageViewer.architecture.io.FileImageLoader;
 import software.ulpgc.ImageViewer.architecture.view.ImageDisplay;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SwingMainFrame extends JFrame {
     public static final String TITLE = "ImageViewer";
     private final FileImageLoader loader;
     private SwingImageDisplay imageDisplay;
+    private final Map<String, Command> commands;
 
     public SwingMainFrame(FileImageLoader loader) {
         this.loader = loader;
         initFrame();
+        commands = new HashMap<>();
     }
 
     private void initFrame() {
@@ -24,6 +29,11 @@ public class SwingMainFrame extends JFrame {
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.X_AXIS));
         addPanels();
         displayFirstImage();
+    }
+
+    public SwingMainFrame put(String key, Command value) {
+        commands.put(key, value);
+        return this;
     }
 
     private void displayFirstImage() {
