@@ -25,7 +25,7 @@ public class FileImageLoader implements ImageLoader {
     }
 
     private Stream<String> getImageExtensions() {
-        return Arrays.stream(Image.Format.values()).map(Enum::name);
+        return Arrays.stream(Image.Format.values()).map(Enum::name).map(String::toLowerCase);
     }
 
     @Override
