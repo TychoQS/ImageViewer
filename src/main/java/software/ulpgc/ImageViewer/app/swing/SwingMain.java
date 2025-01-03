@@ -11,11 +11,13 @@ import java.io.File;
 public class SwingMain {
 
     public static final String RESOURCES_RELATIVE_PATH = "src/main/resources";
+    public static final String NEXT_COMMAND = "next";
+    public static final String PREVIOUS_COMMAND = "previous";
 
     public static void main(String[] args) {
         SwingMainFrame mainFrame = new SwingMainFrame(new FileImageLoader(getResourcesAsFile()));
-        mainFrame.put("next", createDisplayNextImageCommand(mainFrame.getImageDisplay()))
-                 .put("previous", createDisplayPreviousImageCommand(mainFrame.getImageDisplay()));
+        mainFrame.put(NEXT_COMMAND, createDisplayNextImageCommand(mainFrame.getImageDisplay()))
+                 .put(PREVIOUS_COMMAND, createDisplayPreviousImageCommand(mainFrame.getImageDisplay()));
         mainFrame.setVisible(true);
     }
 
