@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Mock implementation of button for change the image (ActionListener not implemented yet)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/Command.java" afterDir="false" />
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Command interface created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,7 +102,7 @@
       <workItem from="1735828277949" duration="1155000" />
       <workItem from="1735910187851" duration="189000" />
       <workItem from="1735910494927" duration="237000" />
-      <workItem from="1735910801668" duration="908000" />
+      <workItem from="1735910801668" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -255,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735911695818</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Command interface created">
+      <option name="closed" value="true" />
+      <created>1735911765660</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1735911765660</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +298,7 @@
     <MESSAGE value="Package organization" />
     <MESSAGE value="SwingMain to execute the application" />
     <MESSAGE value="Mock implementation of button for change the image (ActionListener not implemented yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mock implementation of button for change the image (ActionListener not implemented yet)" />
+    <MESSAGE value="Command interface created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Command interface created" />
   </component>
 </project>
