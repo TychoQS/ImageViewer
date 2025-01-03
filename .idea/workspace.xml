@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Getting images files from a directory" />
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="SwingMain to execute the application">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,27 +46,27 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Image.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MockMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SwingMain.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tycho/IdeaProjects/ImageViewer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Image.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MockMain.executor": "Run",
+    "Application.SwingMain.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Tycho/IdeaProjects/ImageViewer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.language",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tycho\IdeaProjects\ImageViewer\src\main\resources" />
@@ -96,6 +99,10 @@
       <updated>1735749978196</updated>
       <workItem from="1735750008617" duration="5003000" />
       <workItem from="1735819107519" duration="8895000" />
+      <workItem from="1735828277949" duration="1155000" />
+      <workItem from="1735910187851" duration="189000" />
+      <workItem from="1735910494927" duration="237000" />
+      <workItem from="1735910801668" duration="829000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -153,7 +160,95 @@
       <option name="project" value="LOCAL" />
       <updated>1735754950270</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Package organization">
+      <option name="closed" value="true" />
+      <created>1735828380403</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828380403</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Load method implemented.">
+      <option name="closed" value="true" />
+      <created>1735828454280</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828454280</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Moved to a new package">
+      <option name="closed" value="true" />
+      <created>1735828622203</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828622203</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Now return an Object, so our application doesn't care how the graphical library handles displaying images">
+      <option name="closed" value="true" />
+      <created>1735828749986</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828749986</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added method to ensure that an ImageDisplay can display next and previous image">
+      <option name="closed" value="true" />
+      <created>1735828778986</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828778986</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Moved to a new package">
+      <option name="closed" value="true" />
+      <created>1735828794689</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828794689</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ImageDeserializer implementation for swing.">
+      <option name="closed" value="true" />
+      <created>1735828819188</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828819188</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ImageDisplay implementation for swing.">
+      <option name="closed" value="true" />
+      <created>1735828833357</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828833357</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Main implemented">
+      <option name="closed" value="true" />
+      <created>1735828847145</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828847145</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Package organization">
+      <option name="closed" value="true" />
+      <created>1735828861119</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828861119</updated>
+    </task>
+    <task id="LOCAL-00018" summary="SwingMain to execute the application">
+      <option name="closed" value="true" />
+      <created>1735828887647</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1735828887647</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +272,15 @@
     <MESSAGE value="image model interface implmented." />
     <MESSAGE value="Moved to an appropriate package" />
     <MESSAGE value="Getting images files from a directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting images files from a directory" />
+    <MESSAGE value="Load method implemented." />
+    <MESSAGE value="Now return an Object, so our application doesn't care how the graphical library handles displaying images" />
+    <MESSAGE value="Added method to ensure that an ImageDisplay can display next and previous image" />
+    <MESSAGE value="Moved to a new package" />
+    <MESSAGE value="ImageDeserializer implementation for swing." />
+    <MESSAGE value="ImageDisplay implementation for swing." />
+    <MESSAGE value="Main implemented" />
+    <MESSAGE value="Package organization" />
+    <MESSAGE value="SwingMain to execute the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="SwingMain to execute the application" />
   </component>
 </project>

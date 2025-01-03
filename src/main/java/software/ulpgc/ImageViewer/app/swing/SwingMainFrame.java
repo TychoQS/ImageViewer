@@ -21,6 +21,7 @@ public class SwingMainFrame extends JFrame {
         this.setSize(getScreenSize());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
+        this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.X_AXIS));
         addPanels();
         displayFirstImage();
     }
@@ -30,7 +31,21 @@ public class SwingMainFrame extends JFrame {
     }
 
     private void addPanels() {
+        this.add(createPreviousButtonPanel());
         this.add(imageDisplay = createImageDisplay());
+        this.add(createNextButtonPanel());
+    }
+
+    private Component createNextButtonPanel() {
+        JButton button = new JButton(">");
+        button.addActionListener(e -> System.out.println("MOCK IMPLEMENTATION"));
+        return button;
+    }
+
+    private Component createPreviousButtonPanel() {
+        JButton button = new JButton("<");
+        button.addActionListener(e -> System.out.println("MOCK IMPLEMENTATION"));
+        return button;
     }
 
     private SwingImageDisplay createImageDisplay() {
