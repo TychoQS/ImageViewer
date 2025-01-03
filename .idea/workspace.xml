@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Commands added to mainframe map">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Added two more images to use the commands with">
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,7 @@
       <workItem from="1735910187851" duration="189000" />
       <workItem from="1735910494927" duration="237000" />
       <workItem from="1735910801668" duration="1472000" />
-      <workItem from="1735912489483" duration="1398000" />
+      <workItem from="1735912489483" duration="2601000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -292,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735912231067</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Finally added command to display next and previous image">
+      <option name="closed" value="true" />
+      <created>1735913984347</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1735913984347</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added two more images to use the commands with">
+      <option name="closed" value="true" />
+      <created>1735914156277</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1735914156277</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +342,8 @@
     <MESSAGE value="Commands to display previous and next images implemented" />
     <MESSAGE value="Command map and put delegate method added." />
     <MESSAGE value="Commands added to mainframe map" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commands added to mainframe map" />
+    <MESSAGE value="Finally added command to display next and previous image" />
+    <MESSAGE value="Added two more images to use the commands with" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added two more images to use the commands with" />
   </component>
 </project>

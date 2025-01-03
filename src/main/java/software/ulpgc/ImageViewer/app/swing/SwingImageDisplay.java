@@ -37,6 +37,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     @Override
     public void display(Image image) {
         currentImage = image;
+        repaint();
     }
 
     private java.awt.Image deserialize() {
