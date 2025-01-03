@@ -19,8 +19,8 @@ public class SwingMainFrame extends JFrame {
 
     public SwingMainFrame(FileImageLoader loader) {
         this.loader = loader;
+        this.commands = new HashMap<>();
         initFrame();
-        commands = new HashMap<>();
     }
 
     private void initFrame() {
