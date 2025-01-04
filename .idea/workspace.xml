@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Stream at the end is mapped all to lowercase, cause the directory files name are too.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <workItem from="1735910494927" duration="237000" />
       <workItem from="1735910801668" duration="1472000" />
       <workItem from="1735912489483" duration="5362000" />
-      <workItem from="1735993100059" duration="1340000" />
+      <workItem from="1735993100059" duration="4059000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -349,7 +349,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735917996625</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="ImagePresenter implemented to use with the MVP version">
+      <option name="closed" value="true" />
+      <created>1735994588445</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1735994588445</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Inyected object now is an instance of ImagePresenter, to maintain the indirect manipulation with the controls">
+      <option name="closed" value="true" />
+      <created>1735994638920</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1735994638920</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho">
+      <option name="closed" value="true" />
+      <created>1735994732484</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1735994732484</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,9 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Just a mock main to make trials" />
-    <MESSAGE value="image model interface implmented." />
-    <MESSAGE value="Moved to an appropriate package" />
     <MESSAGE value="Getting images files from a directory" />
     <MESSAGE value="Load method implemented." />
     <MESSAGE value="Now return an Object, so our application doesn't care how the graphical library handles displaying images" />
@@ -392,6 +413,9 @@
     <MESSAGE value="Nothing important" />
     <MESSAGE value="Next and previous strings now are extracted to constants to encapsulate them" />
     <MESSAGE value="Stream at the end is mapped all to lowercase, cause the directory files name are too." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stream at the end is mapped all to lowercase, cause the directory files name are too." />
+    <MESSAGE value="ImagePresenter implemented to use with the MVP version" />
+    <MESSAGE value="Inyected object now is an instance of ImagePresenter, to maintain the indirect manipulation with the controls" />
+    <MESSAGE value="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho" />
   </component>
 </project>
