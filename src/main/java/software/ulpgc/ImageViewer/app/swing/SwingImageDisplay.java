@@ -7,26 +7,31 @@ import software.ulpgc.ImageViewer.architecture.view.ViewPort;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private final ImageDeserializer deserializer;
-    private Image currentImage;
+    private final List<PaintOrder> paintOrders;
 
     public SwingImageDisplay(ImageDeserializer deserializer) {
         this.deserializer = deserializer;
+        this.paintOrders = new ArrayList<>();
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        drawCurrentImage(g);
+        drawCurrentPaintOrders(g);
     }
 
-    private void drawCurrentImage(Graphics g) {
-        java.awt.Image image = deserialize();
-        ViewPort viewPort = createViewPort(image);
-        g.drawImage(image, viewPort.x(), viewPort.y(), viewPort.width(), viewPort.height(), null);
+    private void drawCurrentPaintOrders(Graphics g) {
+        for (PaintOrder paintOrder : paintOrders) {
+            java.awt.Image image = deserialize(paintOrder.content);
+            ViewPort viewPort = createViewPort(image);
+            g.drawImage(image, viewPort.x(), viewPort.y(), viewPort.width(), viewPort.height(), null);
+        }
     }
 
     private ViewPort createViewPort(java.awt.Image image) {
@@ -36,23 +41,29 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
 
     @Override
     public void display(Image image) {
-        currentImage = image;
+        paintOrders.clear();
+        paintOrders.add(getPaintOrderFrom(image));
         repaint();
     }
 
-    private java.awt.Image deserialize() {
-        return (java.awt.Image) deserializer.deserialize(currentImage.content());
+    private java.awt.Image deserialize(byte[] content) {
+        return (java.awt.Image) deserializer.deserialize(content);
+    }
+
+    private static PaintOrder getPaintOrderFrom(Image image) {
+        return new PaintOrder(image.content(), 0);
     }
 
     @Override
     public void displayNext() {
-        display(currentImage.next());
+        // display(currentImage.next());
     }
 
     @Override
     public void displayPrevious() {
-        display(currentImage.previous());
+        // display(currentImage.previous());
     }
 
+    private record PaintOrder(byte[] content, int offset) {}
 
 }
