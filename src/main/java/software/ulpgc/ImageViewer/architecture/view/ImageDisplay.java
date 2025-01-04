@@ -7,6 +7,7 @@ public interface ImageDisplay {
     void onReleasing(Released released);
     void onDragging(Dragged dragged);
     int getWidth();
+    void clear();
     interface Dragged {
         Dragged Null = position -> {};
         void position (int position);
