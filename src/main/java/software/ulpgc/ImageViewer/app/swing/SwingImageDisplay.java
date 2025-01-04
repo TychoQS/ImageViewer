@@ -76,7 +76,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         for (PaintOrder paintOrder : paintOrders) {
             java.awt.Image image = deserialize(paintOrder.content);
             ViewPort viewPort = createViewPort(image);
-            g.drawImage(image, viewPort.x(), viewPort.y(), viewPort.width(), viewPort.height(), null);
+            g.drawImage(image, viewPort.x() + paintOrder.offset(), viewPort.y(), viewPort.width(), viewPort.height(), null);
         }
     }
 
@@ -87,9 +87,12 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
 
     @Override
     public void display(Image image, int offset) {
-        paintOrders.clear();
-        paintOrders.add(getPaintOrderFrom(image));
+        paintOrders.add(getPaintOrderFrom(image, offset));
         repaint();
+    }
+
+    public void clear() {
+        paintOrders.clear();
     }
 
     @Override
@@ -106,8 +109,8 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         return (java.awt.Image) deserializer.deserialize(content);
     }
 
-    private static PaintOrder getPaintOrderFrom(Image image) {
-        return new PaintOrder(image.content(), 0);
+    private static PaintOrder getPaintOrderFrom(Image image, int offset) {
+        return new PaintOrder(image.content(), offset);
     }
 
     private record PaintOrder(byte[] content, int offset) {}
