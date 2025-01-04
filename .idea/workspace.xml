@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Initializate the image of the presenter at the beginning, before showing the mainframe">
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,7 @@
       <workItem from="1735910494927" duration="237000" />
       <workItem from="1735910801668" duration="1472000" />
       <workItem from="1735912489483" duration="5362000" />
-      <workItem from="1735993100059" duration="4059000" />
+      <workItem from="1735993100059" duration="4394000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -373,7 +370,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735994732484</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Now presenter handles the image that is being displayed.">
+      <option name="closed" value="true" />
+      <created>1735997298805</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997298805</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Now display only has the responsibility of display a paintOrder extracted from the image to being displayed. PaintOrder are implemented as a Record inside the class.">
+      <option name="closed" value="true" />
+      <created>1735997393241</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997393241</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Now this class has nothing to do with image loading.">
+      <option name="closed" value="true" />
+      <created>1735997437157</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997437157</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Initializate the image of the presenter at the beginning, before showing the mainframe">
+      <option name="closed" value="true" />
+      <created>1735997470940</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997470940</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,10 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Getting images files from a directory" />
-    <MESSAGE value="Load method implemented." />
-    <MESSAGE value="Now return an Object, so our application doesn't care how the graphical library handles displaying images" />
-    <MESSAGE value="Added method to ensure that an ImageDisplay can display next and previous image" />
     <MESSAGE value="Moved to a new package" />
     <MESSAGE value="ImageDeserializer implementation for swing." />
     <MESSAGE value="ImageDisplay implementation for swing." />
@@ -416,6 +441,10 @@
     <MESSAGE value="ImagePresenter implemented to use with the MVP version" />
     <MESSAGE value="Inyected object now is an instance of ImagePresenter, to maintain the indirect manipulation with the controls" />
     <MESSAGE value="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho" />
-    <option name="LAST_COMMIT_MESSAGE" value="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho" />
+    <MESSAGE value="Now presenter handles the image that is being displayed." />
+    <MESSAGE value="Now display only has the responsibility of display a paintOrder extracted from the image to being displayed. PaintOrder are implemented as a Record inside the class." />
+    <MESSAGE value="Now this class has nothing to do with image loading." />
+    <MESSAGE value="Initializate the image of the presenter at the beginning, before showing the mainframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initializate the image of the presenter at the beginning, before showing the mainframe" />
   </component>
 </project>

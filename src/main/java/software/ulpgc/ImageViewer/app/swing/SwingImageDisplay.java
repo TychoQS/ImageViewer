@@ -54,16 +54,6 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         return new PaintOrder(image.content(), 0);
     }
 
-    @Override
-    public void displayNext() {
-        // display(currentImage.next());
-    }
-
-    @Override
-    public void displayPrevious() {
-        // display(currentImage.previous());
-    }
-
     private record PaintOrder(byte[] content, int offset) {}
 
 }
