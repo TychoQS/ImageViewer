@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Initializate the image of the presenter at the beginning, before showing the mainframe">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="These method of the interface are not being used anymore, so we have removed it.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +106,7 @@
       <workItem from="1735910494927" duration="237000" />
       <workItem from="1735910801668" duration="1472000" />
       <workItem from="1735912489483" duration="5362000" />
-      <workItem from="1735993100059" duration="4394000" />
+      <workItem from="1735993100059" duration="9347000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -402,7 +404,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735997470940</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="These method of the interface are not being used anymore, so we have removed it.">
+      <option name="closed" value="true" />
+      <created>1735997597022</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997597023</updated>
+    </task>
+    <task id="LOCAL-00039" summary="These method of the interface are not being used anymore, so we have removed it.">
+      <option name="closed" value="true" />
+      <created>1735997609545</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997609545</updated>
+    </task>
+    <task id="LOCAL-00040" summary="These method of the interface are not being used anymore, so we have removed it.">
+      <option name="closed" value="true" />
+      <created>1735997738124</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1735997738124</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved to a new package" />
     <MESSAGE value="ImageDeserializer implementation for swing." />
     <MESSAGE value="ImageDisplay implementation for swing." />
     <MESSAGE value="Main implemented" />
@@ -445,6 +470,7 @@
     <MESSAGE value="Now display only has the responsibility of display a paintOrder extracted from the image to being displayed. PaintOrder are implemented as a Record inside the class." />
     <MESSAGE value="Now this class has nothing to do with image loading." />
     <MESSAGE value="Initializate the image of the presenter at the beginning, before showing the mainframe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initializate the image of the presenter at the beginning, before showing the mainframe" />
+    <MESSAGE value="These method of the interface are not being used anymore, so we have removed it." />
+    <option name="LAST_COMMIT_MESSAGE" value="These method of the interface are not being used anymore, so we have removed it." />
   </component>
 </project>
