@@ -4,14 +4,14 @@ import software.ulpgc.ImageViewer.architecture.view.ImageDisplay;
 
 public class DisplayNextImageCommand implements Command {
 
-    private final ImageDisplay display;
+    private final ImagePresenter presenter;
 
-    public DisplayNextImageCommand(ImageDisplay display) {
-        this.display = display;
+    public DisplayNextImageCommand(ImagePresenter presenter) {
+        this.presenter = presenter;
     }
 
     @Override
     public void execute() {
-        display.displayNext();
+        presenter.displayNext();
     }
 }
