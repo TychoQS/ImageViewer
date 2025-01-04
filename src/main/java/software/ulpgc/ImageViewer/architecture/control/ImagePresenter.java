@@ -14,6 +14,7 @@ public class ImagePresenter {
     }
 
     private void drag(int offset) {
+        display.clear();
         display.display(image, offset);
         if (offset > 0) {
             display.display(image.previous(), offset - display.getWidth());
@@ -26,15 +27,12 @@ public class ImagePresenter {
         if (Math.abs(offset) >= display.getWidth() / 2) {
           image = offset > 0 ? image.previous() : image.next();
         }
-        repaint();
-    }
-
-    private void repaint() {
-        this.display.display(image, 0);
+        display(image);
     }
 
     public void display(Image image) {
         this.image = image;
+        display.clear();
         display.display(image, 0);
     }
 
