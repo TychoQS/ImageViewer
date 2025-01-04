@@ -13,12 +13,10 @@ public class SwingMainFrame extends JFrame {
     public static final String TITLE = "ImageViewer";
     public static final String NEXT_COMMAND = "next";
     public static final String PREVIOUS_COMMAND = "previous";
-    private final FileImageLoader loader;
     private SwingImageDisplay imageDisplay;
     private final Map<String, Command> commands;
 
-    public SwingMainFrame(FileImageLoader loader) {
-        this.loader = loader;
+    public SwingMainFrame() {
         this.commands = new HashMap<>();
         initFrame();
     }
@@ -30,16 +28,11 @@ public class SwingMainFrame extends JFrame {
         this.setLocationRelativeTo(null);
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.X_AXIS));
         addPanels();
-        displayFirstImage();
     }
 
     public SwingMainFrame put(String key, Command value) {
         commands.put(key, value);
         return this;
-    }
-
-    private void displayFirstImage() {
-        this.imageDisplay.display(loader.load());
     }
 
     private void addPanels() {
