@@ -3,8 +3,8 @@ package software.ulpgc.ImageViewer.app.swing;
 import software.ulpgc.ImageViewer.architecture.control.Command;
 import software.ulpgc.ImageViewer.architecture.control.DisplayNextImageCommand;
 import software.ulpgc.ImageViewer.architecture.control.DisplayPreviousImageCommand;
+import software.ulpgc.ImageViewer.architecture.control.ImagePresenter;
 import software.ulpgc.ImageViewer.architecture.io.FileImageLoader;
-import software.ulpgc.ImageViewer.architecture.view.ImageDisplay;
 
 import java.io.File;
 
@@ -16,17 +16,18 @@ public class SwingMain {
 
     public static void main(String[] args) {
         SwingMainFrame mainFrame = new SwingMainFrame(new FileImageLoader(getResourcesAsFile()));
-        mainFrame.put(NEXT_COMMAND, createDisplayNextImageCommand(mainFrame.getImageDisplay()))
-                 .put(PREVIOUS_COMMAND, createDisplayPreviousImageCommand(mainFrame.getImageDisplay()));
+        ImagePresenter presenter = new ImagePresenter(mainFrame.getImageDisplay());
+        mainFrame.put(NEXT_COMMAND, createDisplayNextImageCommand(presenter))
+                 .put(PREVIOUS_COMMAND, createDisplayPreviousImageCommand(presenter));
         mainFrame.setVisible(true);
     }
 
-    private static Command createDisplayPreviousImageCommand(ImageDisplay imageDisplay) {
-        return new DisplayPreviousImageCommand(imageDisplay);
+    private static Command createDisplayPreviousImageCommand(ImagePresenter presenter) {
+        return new DisplayPreviousImageCommand(presenter);
     }
 
-    private static Command createDisplayNextImageCommand(ImageDisplay imageDisplay) {
-        return new DisplayNextImageCommand(imageDisplay);
+    private static Command createDisplayNextImageCommand(ImagePresenter presenter) {
+        return new DisplayNextImageCommand(presenter);
     }
 
     private static File getResourcesAsFile() {

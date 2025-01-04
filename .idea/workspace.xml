@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Added a call to repaint, every time an image is displayed.">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Stream at the end is mapped all to lowercase, cause the directory files name are too.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/io/ImageDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/io/ImageDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tycho/IdeaProjects/ImageViewer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tycho/Documents/UNIVERSIDAD/2024-2025 3º/INGENIERIA DEL SOFTWARE II/TRABAJOS PRACTICOS PROYECTOS/image-viewer MVP&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -105,7 +106,8 @@
       <workItem from="1735910187851" duration="189000" />
       <workItem from="1735910494927" duration="237000" />
       <workItem from="1735910801668" duration="1472000" />
-      <workItem from="1735912489483" duration="3807000" />
+      <workItem from="1735912489483" duration="5362000" />
+      <workItem from="1735993100059" duration="1340000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -315,7 +317,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735916678354</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Unused import">
+      <option name="closed" value="true" />
+      <created>1735917888743</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1735917888743</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Nothing important">
+      <option name="closed" value="true" />
+      <created>1735917911036</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1735917911036</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Next and previous strings now are extracted to constants to encapsulate them">
+      <option name="closed" value="true" />
+      <created>1735917949233</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1735917949233</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Stream at the end is mapped all to lowercase, cause the directory files name are too.">
+      <option name="closed" value="true" />
+      <created>1735917996625</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1735917996625</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,8 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pom now according to the explanation in the last practical session" />
-    <MESSAGE value="Class implementation of a Viewport&#10;copied." />
     <MESSAGE value="Just a mock main to make trials" />
     <MESSAGE value="image model interface implmented." />
     <MESSAGE value="Moved to an appropriate package" />
@@ -356,6 +388,10 @@
     <MESSAGE value="Finally added command to display next and previous image" />
     <MESSAGE value="Added two more images to use the commands with" />
     <MESSAGE value="Added a call to repaint, every time an image is displayed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a call to repaint, every time an image is displayed." />
+    <MESSAGE value="Unused import" />
+    <MESSAGE value="Nothing important" />
+    <MESSAGE value="Next and previous strings now are extracted to constants to encapsulate them" />
+    <MESSAGE value="Stream at the end is mapped all to lowercase, cause the directory files name are too." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stream at the end is mapped all to lowercase, cause the directory files name are too." />
   </component>
 </project>
