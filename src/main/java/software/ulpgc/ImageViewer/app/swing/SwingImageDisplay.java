@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 
 
@@ -20,10 +20,12 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private Released released;
     private Dragged dragged;
     private int initialDraggingPosition;
+    private final Map<Integer, java.awt.Image> imageCache;
 
     public SwingImageDisplay(ImageDeserializer deserializer) {
         this.deserializer = deserializer;
         this.paintOrders = new ArrayList<>();
+        this.imageCache = new HashMap<>();
         dragged = Dragged.Null;
         released = Released.Null;
         this.addMouseListener(createMouseListener());
@@ -106,7 +108,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     }
 
     private java.awt.Image deserialize(byte[] content) {
-        return (java.awt.Image) deserializer.deserialize(content);
+        return imageCache.computeIfAbsent(Arrays.hashCode(content), k -> (java.awt.Image) deserializer.deserialize(content));
     }
 
     private static PaintOrder getPaintOrderFrom(Image image, int offset) {
