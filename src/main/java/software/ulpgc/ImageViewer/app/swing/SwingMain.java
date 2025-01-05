@@ -17,13 +17,13 @@ public class SwingMain {
     public static void main(String[] args) {
         SwingMainFrame mainFrame = new SwingMainFrame();
         ImagePresenter presenter = new ImagePresenter(mainFrame.getImageDisplay());
-        initializate(presenter);
+        initialize(presenter);
         mainFrame.put(NEXT_COMMAND, createDisplayNextImageCommand(presenter))
                  .put(PREVIOUS_COMMAND, createDisplayPreviousImageCommand(presenter));
         mainFrame.setVisible(true);
     }
 
-    private static void initializate(ImagePresenter presenter) {
+    private static void initialize(ImagePresenter presenter) {
         presenter.display(new FileImageLoader(getResourcesAsFile()).load());
     }
 
