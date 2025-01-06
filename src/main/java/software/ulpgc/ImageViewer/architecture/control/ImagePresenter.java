@@ -4,6 +4,7 @@ import software.ulpgc.ImageViewer.architecture.model.Image;
 import software.ulpgc.ImageViewer.architecture.view.ImageDisplay;
 
 public class ImagePresenter {
+    public static final int DEFAULT_OFFSET = 0;
     private final ImageDisplay display;
     private Image image;
 
@@ -27,21 +28,24 @@ public class ImagePresenter {
         if (Math.abs(offset) >= display.getWidth() / 2) {
           image = offset > 0 ? image.previous() : image.next();
         }
-        display(image);
+        present();
     }
 
-    public void display(Image image) {
-        this.image = image;
+    private void present() {
         display.clear();
-        display.display(image, 0);
+        display.display(image, DEFAULT_OFFSET);
     }
 
-    public void displayNext() {
-        display(image.next());
+    public void present(Image image) {
+        this.image = image;
+        present();
     }
 
-    public void displayPrevious() {
-        display(image.previous());
+    public void presentNext() {
+        present(image.next());
     }
 
+    public void presentPrevious() {
+        present(image.previous());
+    }
 }

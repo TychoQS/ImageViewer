@@ -1,8 +1,8 @@
 package software.ulpgc.ImageViewer.app.swing;
 
 import software.ulpgc.ImageViewer.architecture.control.Command;
-import software.ulpgc.ImageViewer.architecture.control.DisplayNextImageCommand;
-import software.ulpgc.ImageViewer.architecture.control.DisplayPreviousImageCommand;
+import software.ulpgc.ImageViewer.architecture.control.PresentNextImageCommand;
+import software.ulpgc.ImageViewer.architecture.control.PresentPreviousImageCommand;
 import software.ulpgc.ImageViewer.architecture.control.ImagePresenter;
 import software.ulpgc.ImageViewer.architecture.io.FileImageLoader;
 
@@ -24,15 +24,15 @@ public class SwingMain {
     }
 
     private static void initialize(ImagePresenter presenter) {
-        presenter.display(new FileImageLoader(getResourcesAsFile()).load());
+        presenter.present(new FileImageLoader(getResourcesAsFile()).load());
     }
 
     private static Command createDisplayPreviousImageCommand(ImagePresenter presenter) {
-        return new DisplayPreviousImageCommand(presenter);
+        return new PresentPreviousImageCommand(presenter);
     }
 
     private static Command createDisplayNextImageCommand(ImagePresenter presenter) {
-        return new DisplayNextImageCommand(presenter);
+        return new PresentNextImageCommand(presenter);
     }
 
     private static File getResourcesAsFile() {

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="typo">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Now previous images are not being deserialized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/PresentNextImageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/PresentPreviousImageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,8 @@
       <workItem from="1735910801668" duration="1472000" />
       <workItem from="1735912489483" duration="5362000" />
       <workItem from="1735993100059" duration="11479000" />
-      <workItem from="1736111740094" duration="4118000" />
+      <workItem from="1736111740094" duration="4357000" />
+      <workItem from="1736163653353" duration="1147000" />
     </task>
     <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
       <option name="closed" value="true" />
@@ -484,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736112234033</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Now previous images are not being deserialized">
+      <option name="closed" value="true" />
+      <created>1736116051916</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1736116051916</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commands to display previous and next images implemented" />
     <MESSAGE value="Command map and put delegate method added." />
     <MESSAGE value="Commands added to mainframe map" />
     <MESSAGE value="Finally added command to display next and previous image" />
@@ -527,6 +537,7 @@
     <MESSAGE value="Now the presenter can request the display to clear. Also, when dragging, we need to first clear the paint order to remove the previous images displayed." />
     <MESSAGE value="Implemented clear method" />
     <MESSAGE value="typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo" />
+    <MESSAGE value="Now previous images are not being deserialized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now previous images are not being deserialized" />
   </component>
 </project>
