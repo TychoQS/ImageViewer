@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="A simple zoom function implemented">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/leftArrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/rightArrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trials/image1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trials/image2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trials/image3.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +77,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tycho\IdeaProjects\ImageViewer\src\main\resources" />
+      <recent name="C:\Users\Tycho\IdeaProjects\ImageViewer\src\main\resources\trials" />
     </key>
   </component>
   <component name="RunManager">
@@ -108,15 +115,7 @@
       <workItem from="1735993100059" duration="11479000" />
       <workItem from="1736111740094" duration="4357000" />
       <workItem from="1736163653353" duration="3609000" />
-      <workItem from="1736202475026" duration="1922000" />
-    </task>
-    <task id="LOCAL-00002" summary="Class implementation of a Viewport&#10;copied.">
-      <option name="closed" value="true" />
-      <created>1735751108215</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1735751108215</updated>
+      <workItem from="1736202475026" duration="4572000" />
     </task>
     <task id="LOCAL-00003" summary="Just a mock main to make trials">
       <option name="closed" value="true" />
@@ -502,7 +501,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736203566896</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy.">
+      <option name="closed" value="true" />
+      <created>1736204705139</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1736204705139</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finally added command to display next and previous image" />
     <MESSAGE value="Added two more images to use the commands with" />
     <MESSAGE value="Added a call to repaint, every time an image is displayed." />
     <MESSAGE value="Unused import" />
@@ -545,6 +551,7 @@
     <MESSAGE value="Now previous images are not being deserialized" />
     <MESSAGE value="Renamed to be more in line with the 'Presenter' semantic" />
     <MESSAGE value="A simple zoom function implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="A simple zoom function implemented" />
+    <MESSAGE value="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy." />
   </component>
 </project>

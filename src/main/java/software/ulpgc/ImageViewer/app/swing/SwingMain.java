@@ -10,7 +10,7 @@ import java.io.File;
 
 public class SwingMain {
 
-    public static final String RESOURCES_RELATIVE_PATH = "src/main/resources";
+    public static final String RESOURCES_RELATIVE_PATH = "src/main/resources/trials";
     public static final String NEXT_COMMAND = "next";
     public static final String PREVIOUS_COMMAND = "previous";
 
