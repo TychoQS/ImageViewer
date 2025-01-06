@@ -7,9 +7,7 @@ import software.ulpgc.ImageViewer.architecture.view.ViewPort;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.util.*;
 import java.util.List;
 
@@ -21,15 +19,28 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private Dragged dragged;
     private int initialDraggingPosition;
     private final Map<Integer, java.awt.Image> imageCache;
+    private double zoomFactor;
 
     public SwingImageDisplay(ImageDeserializer deserializer) {
         this.deserializer = deserializer;
         this.paintOrders = new ArrayList<>();
         this.imageCache = new HashMap<>();
+        this.zoomFactor = 1.0;
         dragged = Dragged.Null;
         released = Released.Null;
         this.addMouseListener(createMouseListener());
         this.addMouseMotionListener(createMouseMotionListener());
+        this.addMouseWheelListener(createMouseWheelListener());
+    }
+
+    private MouseWheelListener createMouseWheelListener() {
+        return new MouseWheelListener() {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+                zoomFactor -= (double) e.getWheelRotation() / 10;
+                repaint();
+            }
+        };
     }
 
     private MouseMotionListener createMouseMotionListener() {
@@ -78,8 +89,24 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         for (PaintOrder paintOrder : paintOrders) {
             java.awt.Image image = deserialize(paintOrder.content);
             ViewPort viewPort = createViewPort(image);
-            g.drawImage(image, viewPort.x() + paintOrder.offset(), viewPort.y(), viewPort.width(), viewPort.height(), null);
+            g.drawImage(image, getCenteredX(viewPort) + paintOrder.offset(), getCenteredY(viewPort), getScaledWidthOf(viewPort), getScaledHeightOf(viewPort), null);
         }
+    }
+
+    private int getCenteredY(ViewPort viewPort) {
+        return (getHeight() - getScaledHeightOf(viewPort)) / 2;
+    }
+
+    private int getScaledHeightOf(ViewPort viewPort) {
+        return (int) (viewPort.height() * zoomFactor);
+    }
+
+    private int getCenteredX(ViewPort viewPort) {
+        return (getWidth() - getScaledWidthOf(viewPort)) / 2;
+    }
+
+    private int getScaledWidthOf(ViewPort viewPort) {
+        return (int) (viewPort.width() * zoomFactor);
     }
 
     private ViewPort createViewPort(java.awt.Image image) {
