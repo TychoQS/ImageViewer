@@ -5,14 +5,13 @@ public record ViewPort(int x, int y, int width, int height) {
         return new ViewPort(0, 0, width, height);
     }
 
-    public ViewPort fit(int width, int height) {
-        if (canFit(width, height)) return centeredViewPort(width, height);
+    public ViewPort fit(int width, int height, double zoomFactor) {
+        if (canFit(width, height)) return centeredViewPort((int) (width * zoomFactor), (int) (height * zoomFactor));
 
         return shouldScaleWidth(width, height) ?
                 fitToWidthViewPort(width, height) :
                 fitToHeightViewPort(width, height);
     }
-
     private boolean shouldScaleWidth(int width, int height) {
         return ratio(width, height) > viewPortRatio();
     }

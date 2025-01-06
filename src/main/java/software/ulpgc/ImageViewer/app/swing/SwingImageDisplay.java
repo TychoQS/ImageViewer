@@ -89,29 +89,13 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         for (PaintOrder paintOrder : paintOrders) {
             java.awt.Image image = deserialize(paintOrder.content);
             ViewPort viewPort = createViewPort(image);
-            g.drawImage(image, getCenteredX(viewPort) + paintOrder.offset(), getCenteredY(viewPort), getScaledWidthOf(viewPort), getScaledHeightOf(viewPort), null);
+            g.drawImage(image, viewPort.x() + paintOrder.offset(), viewPort.y(), viewPort.width(), viewPort.height(), null);
         }
-    }
-
-    private int getCenteredY(ViewPort viewPort) {
-        return (getHeight() - getScaledHeightOf(viewPort)) / 2;
-    }
-
-    private int getScaledHeightOf(ViewPort viewPort) {
-        return (int) (viewPort.height() * zoomFactor);
-    }
-
-    private int getCenteredX(ViewPort viewPort) {
-        return (getWidth() - getScaledWidthOf(viewPort)) / 2;
-    }
-
-    private int getScaledWidthOf(ViewPort viewPort) {
-        return (int) (viewPort.width() * zoomFactor);
     }
 
     private ViewPort createViewPort(java.awt.Image image) {
         return ViewPort.ofSize(getWidth(), getHeight())
-                       .fit(image.getWidth(null), image.getHeight(null));
+                       .fit(image.getWidth(null), image.getHeight(null), zoomFactor);
     }
 
     @Override

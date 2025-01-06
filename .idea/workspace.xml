@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Now previous images are not being deserialized">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="A simple zoom function implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayNextImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/PresentNextImageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/DisplayPreviousImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/PresentPreviousImageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,15 +107,8 @@
       <workItem from="1735912489483" duration="5362000" />
       <workItem from="1735993100059" duration="11479000" />
       <workItem from="1736111740094" duration="4357000" />
-      <workItem from="1736163653353" duration="1147000" />
-    </task>
-    <task id="LOCAL-00001" summary="Pom now according to the explanation in the last practical session">
-      <option name="closed" value="true" />
-      <created>1735750270633</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1735750270633</updated>
+      <workItem from="1736163653353" duration="3609000" />
+      <workItem from="1736202475026" duration="1922000" />
     </task>
     <task id="LOCAL-00002" summary="Class implementation of a Viewport&#10;copied.">
       <option name="closed" value="true" />
@@ -495,7 +486,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736116051916</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Renamed to be more in line with the 'Presenter' semantic">
+      <option name="closed" value="true" />
+      <created>1736164966913</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1736164966913</updated>
+    </task>
+    <task id="LOCAL-00050" summary="A simple zoom function implemented">
+      <option name="closed" value="true" />
+      <created>1736203566895</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1736203566896</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,8 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Command map and put delegate method added." />
-    <MESSAGE value="Commands added to mainframe map" />
     <MESSAGE value="Finally added command to display next and previous image" />
     <MESSAGE value="Added two more images to use the commands with" />
     <MESSAGE value="Added a call to repaint, every time an image is displayed." />
@@ -538,6 +543,8 @@
     <MESSAGE value="Implemented clear method" />
     <MESSAGE value="typo" />
     <MESSAGE value="Now previous images are not being deserialized" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now previous images are not being deserialized" />
+    <MESSAGE value="Renamed to be more in line with the 'Presenter' semantic" />
+    <MESSAGE value="A simple zoom function implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="A simple zoom function implemented" />
   </component>
 </project>
