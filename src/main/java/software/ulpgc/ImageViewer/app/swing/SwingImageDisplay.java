@@ -22,6 +22,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private double zoomFactor;
 
     public SwingImageDisplay(ImageDeserializer deserializer) {
+        super();
         this.deserializer = deserializer;
         this.paintOrders = new ArrayList<>();
         this.imageCache = new HashMap<>();
