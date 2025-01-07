@@ -96,6 +96,6 @@ public class SwingMainFrame extends JFrame {
     }
 
     private static Dimension getScreenSize() {
-        return Toolkit.getDefaultToolkit().getScreenSize();
+        return GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().getSize();
     }
 }
