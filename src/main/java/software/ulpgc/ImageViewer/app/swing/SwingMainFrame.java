@@ -61,7 +61,7 @@ public class SwingMainFrame extends JFrame {
         JButton button = new JButton();
         initButton(button);
         button.setIcon(getNextButtonIcon());
-        button.addActionListener(e -> commands.get(NEXT_COMMAND).execute());
+        button.addActionListener(_ -> commands.get(NEXT_COMMAND).execute());
         return button;
     }
 
@@ -73,7 +73,7 @@ public class SwingMainFrame extends JFrame {
         JButton button = new JButton();
         initButton(button);
         button.setIcon(getPreviousButtonIcon());
-        button.addActionListener(e -> commands.get(PREVIOUS_COMMAND).execute());
+        button.addActionListener(_ -> commands.get(PREVIOUS_COMMAND).execute());
         return button;
     }
 
