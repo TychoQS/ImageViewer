@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Method renaming, cause the are not panel in the return value of them">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,27 +48,27 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Image.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MockMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SwingMain.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tycho/Documents/UNIVERSIDAD/2024-2025 3º/INGENIERIA DEL SOFTWARE II/TRABAJOS PRACTICOS PROYECTOS/image-viewer MVP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Image.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MockMain.executor": "Run",
+    "Application.SwingMain.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Tycho/Documents/UNIVERSIDAD/2024-2025 3º/INGENIERIA DEL SOFTWARE II/TRABAJOS PRACTICOS PROYECTOS/image-viewer MVC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.language",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tycho\IdeaProjects\ImageViewer\src\main\resources" />
@@ -110,71 +111,8 @@
       <workItem from="1736111740094" duration="4357000" />
       <workItem from="1736163653353" duration="3609000" />
       <workItem from="1736202475026" duration="5928000" />
-      <workItem from="1736208942503" duration="387000" />
-    </task>
-    <task id="LOCAL-00004" summary="image model interface implmented.">
-      <option name="closed" value="true" />
-      <created>1735752909158</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1735752909158</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Moved to an appropriate package">
-      <option name="closed" value="true" />
-      <created>1735752924036</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1735752924036</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Moved to an appropriate package">
-      <option name="closed" value="true" />
-      <created>1735752935392</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1735752935392</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Getting images files from a directory">
-      <option name="closed" value="true" />
-      <created>1735754950270</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1735754950270</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Package organization">
-      <option name="closed" value="true" />
-      <created>1735828380403</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828380403</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Load method implemented.">
-      <option name="closed" value="true" />
-      <created>1735828454280</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828454280</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Moved to a new package">
-      <option name="closed" value="true" />
-      <created>1735828622203</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828622203</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Now return an Object, so our application doesn't care how the graphical library handles displaying images">
-      <option name="closed" value="true" />
-      <created>1735828749986</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828749986</updated>
+      <workItem from="1736208942503" duration="584000" />
+      <workItem from="1736252585471" duration="6878000" />
     </task>
     <task id="LOCAL-00012" summary="Added method to ensure that an ImageDisplay can display next and previous image">
       <option name="closed" value="true" />
@@ -504,7 +442,71 @@
       <option name="project" value="LOCAL" />
       <updated>1736207667382</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="super call">
+      <option name="closed" value="true" />
+      <created>1736209453662</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1736209453662</updated>
+    </task>
+    <task id="LOCAL-00054" summary="GUI changes on buttons position and also now buttons don't have background">
+      <option name="closed" value="true" />
+      <created>1736209509080</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1736209509080</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Now the frame size is accurate to the screen over the taskbar">
+      <option name="closed" value="true" />
+      <created>1736254943368</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1736254943369</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Fixing warnings">
+      <option name="closed" value="true" />
+      <created>1736255020049</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1736255020050</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Minimum Zoom factor to setted.">
+      <option name="closed" value="true" />
+      <created>1736256985221</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1736256985221</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Now the max zoomed image will be the one that fits the viewport">
+      <option name="closed" value="true" />
+      <created>1736257066720</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1736257066720</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Now images that are not gonna be zoomed, doesn't has the value of height and width changed">
+      <option name="closed" value="true" />
+      <created>1736257849659</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1736257849659</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite">
+      <option name="closed" value="true" />
+      <created>1736257895580</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1736257895580</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,14 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Unused import" />
-    <MESSAGE value="Nothing important" />
-    <MESSAGE value="Next and previous strings now are extracted to constants to encapsulate them" />
-    <MESSAGE value="Stream at the end is mapped all to lowercase, cause the directory files name are too." />
-    <MESSAGE value="ImagePresenter implemented to use with the MVP version" />
-    <MESSAGE value="Inyected object now is an instance of ImagePresenter, to maintain the indirect manipulation with the controls" />
-    <MESSAGE value="Application now keep working with the image presenter. Direct manipulation is not implemented yet tho" />
-    <MESSAGE value="Now presenter handles the image that is being displayed." />
     <MESSAGE value="Now display only has the responsibility of display a paintOrder extracted from the image to being displayed. PaintOrder are implemented as a Record inside the class." />
     <MESSAGE value="Now this class has nothing to do with image loading." />
     <MESSAGE value="Initializate the image of the presenter at the beginning, before showing the mainframe" />
@@ -547,6 +541,29 @@
     <MESSAGE value="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy." />
     <MESSAGE value="Added some icons" />
     <MESSAGE value="Method renaming, cause the are not panel in the return value of them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Method renaming, cause the are not panel in the return value of them" />
+    <MESSAGE value="super call" />
+    <MESSAGE value="GUI changes on buttons position and also now buttons don't have background" />
+    <MESSAGE value="Now the frame size is accurate to the screen over the taskbar" />
+    <MESSAGE value="Fixing warnings" />
+    <MESSAGE value="Minimum Zoom factor to setted." />
+    <MESSAGE value="Now the max zoomed image will be the one that fits the viewport" />
+    <MESSAGE value="Now images that are not gonna be zoomed, doesn't has the value of height and width changed" />
+    <MESSAGE value="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java</url>
+          <line>8</line>
+          <properties class="software.ulpgc.ImageViewer.architecture.view.ImageDisplay" method="onZooming">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
