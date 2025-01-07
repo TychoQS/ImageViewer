@@ -6,7 +6,9 @@ public record ViewPort(int x, int y, int width, int height) {
     }
 
     public ViewPort fit(int width, int height, double zoomFactor) {
-        if (canFit(width, height)) return centeredViewPort((int) (width * zoomFactor), (int) (height * zoomFactor));
+        width = (int) (width * zoomFactor);
+        height = (int) (height * zoomFactor);
+        if (canFit(width, height)) return centeredViewPort(width, height);
 
         return shouldScaleWidth(width, height) ?
                 fitToWidthViewPort(width, height) :
