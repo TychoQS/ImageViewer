@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,31 +109,7 @@
       <workItem from="1736163653353" duration="3609000" />
       <workItem from="1736202475026" duration="5928000" />
       <workItem from="1736208942503" duration="584000" />
-      <workItem from="1736252585471" duration="6878000" />
-    </task>
-    <task id="LOCAL-00012" summary="Added method to ensure that an ImageDisplay can display next and previous image">
-      <option name="closed" value="true" />
-      <created>1735828778986</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828778986</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Moved to a new package">
-      <option name="closed" value="true" />
-      <created>1735828794689</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828794689</updated>
-    </task>
-    <task id="LOCAL-00014" summary="ImageDeserializer implementation for swing.">
-      <option name="closed" value="true" />
-      <created>1735828819188</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828819188</updated>
+      <workItem from="1736252585471" duration="7352000" />
     </task>
     <task id="LOCAL-00015" summary="ImageDisplay implementation for swing.">
       <option name="closed" value="true" />
@@ -506,7 +479,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736257895580</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implemetation of a ImageDisplay with the graphical library">
+      <option name="closed" value="true" />
+      <created>1736260261869</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1736260261869</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implemetation of a ImageDisplay with the graphical library">
+      <option name="closed" value="true" />
+      <created>1736260267240</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1736260267240</updated>
+    </task>
+    <task id="LOCAL-00063" summary="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming">
+      <option name="closed" value="true" />
+      <created>1736260359810</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1736260359810</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,9 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Now display only has the responsibility of display a paintOrder extracted from the image to being displayed. PaintOrder are implemented as a Record inside the class." />
-    <MESSAGE value="Now this class has nothing to do with image loading." />
-    <MESSAGE value="Initializate the image of the presenter at the beginning, before showing the mainframe" />
     <MESSAGE value="These method of the interface are not being used anymore, so we have removed it." />
     <MESSAGE value="Interfaces to adapt graphical library events with method to register the action to do added. Also getWidth method added so we can call it with an instance of the interface." />
     <MESSAGE value="Added action listener to register the drag and release of the mouse over the image displayed. Also implemented new methods of the interface" />
@@ -549,7 +543,10 @@
     <MESSAGE value="Now the max zoomed image will be the one that fits the viewport" />
     <MESSAGE value="Now images that are not gonna be zoomed, doesn't has the value of height and width changed" />
     <MESSAGE value="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maximum zoom value added to control and don't let the zoomFactor variable increase infinite" />
+    <MESSAGE value="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implementation of a ImageDisplay with the graphical library" />
+    <MESSAGE value="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implemetation of a ImageDisplay with the graphical library" />
+    <MESSAGE value="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming" />
+    <option name="LAST_COMMIT_MESSAGE" value="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

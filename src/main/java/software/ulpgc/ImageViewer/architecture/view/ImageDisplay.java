@@ -11,15 +11,15 @@ public interface ImageDisplay {
     int getWidth();
     void clear();
     interface Dragged {
-        Dragged Null = position -> {};
+        Dragged Null = _ -> {};
         void position (int position);
     }
     interface Released {
-        Released Null = position -> {};
+        Released Null = _ -> {};
         void position (int position);
     }
     interface Zoomed {
-        Zoomed Null = position -> {};
+        Zoomed Null = _ -> {};
         void increase(int increment);
     }
 }

@@ -136,7 +136,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     }
 
     private java.awt.Image deserialize(byte[] content) {
-        return imageCache.computeIfAbsent(Arrays.hashCode(content), k -> (java.awt.Image) deserializer.deserialize(content));
+        return imageCache.computeIfAbsent(Arrays.hashCode(content), _ -> (java.awt.Image) deserializer.deserialize(content));
     }
 
     private static PaintOrder getPaintOrderFrom(Image image, int offset, double zoomFactor) {
