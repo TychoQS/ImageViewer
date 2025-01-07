@@ -14,6 +14,7 @@ import java.util.List;
 
 public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private static final double MINIMUM_ZOOM_FACTOR = 1.0;
+    private static final double MAXIMUM_ZOOM_FACTOR = 2.0;
     private final ImageDeserializer deserializer;
     private final List<PaintOrder> paintOrders;
     private Released released;
@@ -40,6 +41,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
                 zoomFactor = Math.max(computeZoomFactorWith(e), MINIMUM_ZOOM_FACTOR);
+                zoomFactor = Math.min(zoomFactor, MAXIMUM_ZOOM_FACTOR);
                 repaint();
             }
 
