@@ -13,24 +13,23 @@ import java.util.List;
 
 
 public class SwingImageDisplay extends JPanel implements ImageDisplay {
-    private static final double MINIMUM_ZOOM_FACTOR = 1.0;
-    private static final double MAXIMUM_ZOOM_FACTOR = 2.0;
     private final ImageDeserializer deserializer;
     private final List<PaintOrder> paintOrders;
     private Released released;
     private Dragged dragged;
+    private Zoomed zoomed;
     private int initialDraggingPosition;
     private final Map<Integer, java.awt.Image> imageCache;
-    private double zoomFactor;
+    private boolean dragging = false;
 
     public SwingImageDisplay(ImageDeserializer deserializer) {
         super();
         this.deserializer = deserializer;
         this.paintOrders = new ArrayList<>();
         this.imageCache = new HashMap<>();
-        this.zoomFactor = 1.0;
         dragged = Dragged.Null;
         released = Released.Null;
+        zoomed = Zoomed.Null;
         this.addMouseListener(createMouseListener());
         this.addMouseMotionListener(createMouseMotionListener());
         this.addMouseWheelListener(createMouseWheelListener());
@@ -40,13 +39,12 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         return new MouseWheelListener() {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
-                zoomFactor = Math.max(computeZoomFactorWith(e), MINIMUM_ZOOM_FACTOR);
-                zoomFactor = Math.min(zoomFactor, MAXIMUM_ZOOM_FACTOR);
-                repaint();
+                if (isNotBeingDragged()) zoomed.increase(e.getWheelRotation());
+
             }
 
-            private double computeZoomFactorWith(MouseWheelEvent e) {
-                return zoomFactor - (double) e.getWheelRotation() / 10;
+            private boolean isNotBeingDragged() {
+                return dragged != Dragged.Null;
             }
         };
     }
@@ -55,6 +53,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         return new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
+                dragging = true;
                 dragged.position(e.getX() - initialDraggingPosition);
             }
 
@@ -76,6 +75,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
             @Override
             public void mouseReleased(MouseEvent e) {
                 released.position(e.getX() - initialDraggingPosition);
+                dragging = false;
             }
 
             @Override
@@ -96,19 +96,19 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private void drawCurrentPaintOrders(Graphics g) {
         for (PaintOrder paintOrder : paintOrders) {
             java.awt.Image image = deserialize(paintOrder.content);
-            ViewPort viewPort = createViewPort(image);
+            ViewPort viewPort = createViewPort(image, paintOrder.zoomFactor);
             g.drawImage(image, viewPort.x() + paintOrder.offset(), viewPort.y(), viewPort.width(), viewPort.height(), null);
         }
     }
 
-    private ViewPort createViewPort(java.awt.Image image) {
+    private ViewPort createViewPort(java.awt.Image image, double zoomFactor) {
         return ViewPort.ofSize(getWidth(), getHeight())
                        .fit(image.getWidth(null), image.getHeight(null), zoomFactor);
     }
 
     @Override
-    public void display(Image image, int offset) {
-        paintOrders.add(getPaintOrderFrom(image, offset));
+    public void display(Image image, int offset, double zoomFactor) {
+        paintOrders.add(getPaintOrderFrom(image, offset, zoomFactor));
         repaint();
     }
 
@@ -126,14 +126,23 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         this.dragged = dragged != null ? dragged : Dragged.Null;
     }
 
+    public void onZooming(Zoomed zoomed) {
+        this.zoomed = zoomed != null ? zoomed : Zoomed.Null;
+    }
+
+    @Override
+    public boolean isBeingDragged() {
+        return this.dragging;
+    }
+
     private java.awt.Image deserialize(byte[] content) {
         return imageCache.computeIfAbsent(Arrays.hashCode(content), k -> (java.awt.Image) deserializer.deserialize(content));
     }
 
-    private static PaintOrder getPaintOrderFrom(Image image, int offset) {
-        return new PaintOrder(image.content(), offset);
+    private static PaintOrder getPaintOrderFrom(Image image, int offset, double zoomFactor) {
+        return new PaintOrder(image.content(), offset, zoomFactor);
     }
 
-    private record PaintOrder(byte[] content, int offset) {}
+    private record PaintOrder(byte[] content, int offset, double zoomFactor) {}
 
 }
