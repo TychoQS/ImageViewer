@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/leftArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/rightArrow.png" afterDir="false" />
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Method renaming, cause the are not panel in the return value of them">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingMainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trials/image1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trials/image2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/trials/image3.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,15 +109,8 @@
       <workItem from="1735993100059" duration="11479000" />
       <workItem from="1736111740094" duration="4357000" />
       <workItem from="1736163653353" duration="3609000" />
-      <workItem from="1736202475026" duration="4572000" />
-    </task>
-    <task id="LOCAL-00003" summary="Just a mock main to make trials">
-      <option name="closed" value="true" />
-      <created>1735751171234</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1735751171234</updated>
+      <workItem from="1736202475026" duration="5928000" />
+      <workItem from="1736208942503" duration="387000" />
     </task>
     <task id="LOCAL-00004" summary="image model interface implmented.">
       <option name="closed" value="true" />
@@ -509,7 +496,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736204705139</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Added some icons">
+      <option name="closed" value="true" />
+      <created>1736207667382</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1736207667382</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,8 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added two more images to use the commands with" />
-    <MESSAGE value="Added a call to repaint, every time an image is displayed." />
     <MESSAGE value="Unused import" />
     <MESSAGE value="Nothing important" />
     <MESSAGE value="Next and previous strings now are extracted to constants to encapsulate them" />
@@ -552,6 +545,8 @@
     <MESSAGE value="Renamed to be more in line with the 'Presenter' semantic" />
     <MESSAGE value="A simple zoom function implemented" />
     <MESSAGE value="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Zoom conversion implemented with the viewport, cause is the class which holds the responsability of returns an objecti with the proper coordinates and dimension to draw the image. So the display only treats how to show the image. Also this way is more easy." />
+    <MESSAGE value="Added some icons" />
+    <MESSAGE value="Method renaming, cause the are not panel in the return value of them" />
+    <option name="LAST_COMMIT_MESSAGE" value="Method renaming, cause the are not panel in the return value of them" />
   </component>
 </project>

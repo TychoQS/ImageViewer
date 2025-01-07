@@ -1,7 +1,6 @@
 package software.ulpgc.ImageViewer.app.swing;
 
 import software.ulpgc.ImageViewer.architecture.control.Command;
-import software.ulpgc.ImageViewer.architecture.io.FileImageLoader;
 import software.ulpgc.ImageViewer.architecture.view.ImageDisplay;
 
 import javax.swing.*;
@@ -17,6 +16,7 @@ public class SwingMainFrame extends JFrame {
     public static final String RIGHT_BUTTON_ICON = "/rightArrow.png";
     public static final String LEFT_BUTTON_ICON = "/leftArrow.png";
     public static final String ICON = "/icon.png";
+    public static final int ZERO = 0;
     private SwingImageDisplay imageDisplay;
     private final Map<String, Command> commands;
 
@@ -32,6 +32,7 @@ public class SwingMainFrame extends JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.X_AXIS));
+        this.setLayout(new BorderLayout());
         addPanels();
     }
 
@@ -45,12 +46,18 @@ public class SwingMainFrame extends JFrame {
     }
 
     private void addPanels() {
-        this.add(createPreviousButtonPanel());
-        this.add(imageDisplay = createImageDisplay());
-        this.add(createNextButtonPanel());
+        this.add(BorderLayout.SOUTH, createButtonPanel());
+        this.add(BorderLayout.CENTER, imageDisplay = createImageDisplay());
     }
 
-    private Component createNextButtonPanel() {
+    private Component createButtonPanel() {
+        JPanel jPanel = new JPanel();
+        jPanel.add(createPreviousButton());
+        jPanel.add(createNextButton());
+        return jPanel;
+    }
+
+    private Component createNextButton() {
         JButton button = new JButton();
         initButton(button);
         button.setIcon(getNextButtonIcon());
@@ -62,7 +69,7 @@ public class SwingMainFrame extends JFrame {
         return new ImageIcon(Objects.requireNonNull(SwingMainFrame.class.getResource(RIGHT_BUTTON_ICON)));
     }
 
-    private Component createPreviousButtonPanel() {
+    private Component createPreviousButton() {
         JButton button = new JButton();
         initButton(button);
         button.setIcon(getPreviousButtonIcon());
@@ -76,7 +83,7 @@ public class SwingMainFrame extends JFrame {
 
     private static void initButton(JButton button) {
         button.setBorder(BorderFactory.createEmptyBorder());
-        button.setBackground(new Color(0, 0, 0, 0));
+        button.setBackground(new Color(ZERO, ZERO, ZERO, ZERO));
         button.setOpaque(false);
     }
 
