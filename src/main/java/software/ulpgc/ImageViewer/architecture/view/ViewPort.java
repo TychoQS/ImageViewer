@@ -2,7 +2,7 @@ package software.ulpgc.ImageViewer.architecture.view;
 
 public record ViewPort(int x, int y, int width, int height) {
 
-    public static final double DEFAULT_ZOOM_FACTOR = 1.0;
+    public static final double MINIMUM_SCALE_FACTOR = 1.0;
 
     public static ViewPort ofSize(int width, int height) {
         return new ViewPort(0, 0, width, height);
@@ -18,8 +18,8 @@ public record ViewPort(int x, int y, int width, int height) {
                 fitToHeightViewPort(width, height);
     }
 
-    private boolean needToScaleImage(int width, int height, double zoomFactor) {
-        return canFit(width, height) || zoomFactor != DEFAULT_ZOOM_FACTOR;
+    private boolean needToScaleImage(int width, int height, double scaleFactor) {
+        return canFit(width, height) || scaleFactor != MINIMUM_SCALE_FACTOR;
     }
 
     private boolean shouldScaleWidth(int width, int height) {
