@@ -1,6 +1,9 @@
 package software.ulpgc.ImageViewer.architecture.view;
 
 public record ViewPort(int x, int y, int width, int height) {
+
+    public static final double DEFAULT_ZOOM_FACTOR = 1.0;
+
     public static ViewPort ofSize(int width, int height) {
         return new ViewPort(0, 0, width, height);
     }
@@ -8,12 +11,17 @@ public record ViewPort(int x, int y, int width, int height) {
     public ViewPort fit(int width, int height, double zoomFactor) {
         int zoomedWidth = (int) (width * zoomFactor);
         int zoomedHeight = (int) (height * zoomFactor);
-        if (canFit(width, height)) return centeredViewPort(zoomedWidth, zoomedHeight);
+        if (needToScaleImage(width, height, zoomFactor)) return centeredViewPort(zoomedWidth, zoomedHeight);
 
         return shouldScaleWidth(width, height) ?
                 fitToWidthViewPort(width, height) :
                 fitToHeightViewPort(width, height);
     }
+
+    private boolean needToScaleImage(int width, int height, double zoomFactor) {
+        return canFit(width, height) || zoomFactor != DEFAULT_ZOOM_FACTOR;
+    }
+
     private boolean shouldScaleWidth(int width, int height) {
         return ratio(width, height) > viewPortRatio();
     }
