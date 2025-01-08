@@ -17,7 +17,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     private final List<PaintOrder> paintOrders;
     private Released released;
     private Dragged dragged;
-    private Zoomed zoomed;
+    private Scrolled scrolled;
     private int initialDraggingPosition;
     private final Map<Integer, java.awt.Image> imageCache;
     private boolean dragging = false;
@@ -29,7 +29,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         this.imageCache = new HashMap<>();
         dragged = Dragged.Null;
         released = Released.Null;
-        zoomed = Zoomed.Null;
+        scrolled = Scrolled.Null;
         this.addMouseListener(createMouseListener());
         this.addMouseMotionListener(createMouseMotionListener());
         this.addMouseWheelListener(createMouseWheelListener());
@@ -39,7 +39,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         return new MouseWheelListener() {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
-                if (isNotBeingDragged()) zoomed.increase(e.getWheelRotation());
+                if (isNotBeingDragged()) scrolled.direction(e.getWheelRotation());
 
             }
 
@@ -126,8 +126,8 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
         this.dragged = dragged != null ? dragged : Dragged.Null;
     }
 
-    public void onZooming(Zoomed zoomed) {
-        this.zoomed = zoomed != null ? zoomed : Zoomed.Null;
+    public void onScrolling(Scrolled scrolled) {
+        this.scrolled = scrolled != null ? scrolled : Scrolled.Null;
     }
 
     @Override

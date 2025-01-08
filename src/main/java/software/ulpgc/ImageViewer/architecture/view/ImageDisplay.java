@@ -6,7 +6,7 @@ public interface ImageDisplay {
     void display(Image image, int offset, double zoomFactor);
     void onReleasing(Released released);
     void onDragging(Dragged dragged);
-    void onZooming(Zoomed zoomed);
+    void onScrolling(Scrolled scrolled);
     boolean isBeingDragged();
     int getWidth();
     void clear();
@@ -18,8 +18,8 @@ public interface ImageDisplay {
         Released Null = _ -> {};
         void position (int position);
     }
-    interface Zoomed {
-        Zoomed Null = _ -> {};
-        void increase(int increment);
+    interface Scrolled {
+        Scrolled Null = _ -> {};
+        void direction(int directionWay);
     }
 }

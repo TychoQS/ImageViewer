@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Fixing warnings">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Now images that don't fit the area, can be expanded too.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,23 +114,7 @@
       <workItem from="1736202475026" duration="5928000" />
       <workItem from="1736208942503" duration="584000" />
       <workItem from="1736252585471" duration="7441000" />
-      <workItem from="1736340679051" duration="601000" />
-    </task>
-    <task id="LOCAL-00016" summary="Main implemented">
-      <option name="closed" value="true" />
-      <created>1735828847145</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828847145</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Package organization">
-      <option name="closed" value="true" />
-      <created>1735828861119</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828861119</updated>
+      <workItem from="1736340679051" duration="2517000" />
     </task>
     <task id="LOCAL-00018" summary="SwingMain to execute the application">
       <option name="closed" value="true" />
@@ -505,7 +492,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736260710329</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Refactor">
+      <option name="closed" value="true" />
+      <created>1736341776807</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1736341776808</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Now images that don't fit the area, can be expanded too.">
+      <option name="closed" value="true" />
+      <created>1736342725019</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1736342725019</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,8 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="These method of the interface are not being used anymore, so we have removed it." />
-    <MESSAGE value="Interfaces to adapt graphical library events with method to register the action to do added. Also getWidth method added so we can call it with an instance of the interface." />
     <MESSAGE value="Added action listener to register the drag and release of the mouse over the image displayed. Also implemented new methods of the interface" />
     <MESSAGE value="Registered what to do on drag and release to the display. Also adapted de signature of the display method, that was changed." />
     <MESSAGE value="We need a method clear in the interface, cause we need let the Presenter request the display when to clear the paint too." />
@@ -548,6 +549,8 @@
     <MESSAGE value="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implemetation of a ImageDisplay with the graphical library" />
     <MESSAGE value="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming" />
     <MESSAGE value="Fixing warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing warnings" />
+    <MESSAGE value="Refactor" />
+    <MESSAGE value="Now images that don't fit the area, can be expanded too." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now images that don't fit the area, can be expanded too." />
   </component>
 </project>
