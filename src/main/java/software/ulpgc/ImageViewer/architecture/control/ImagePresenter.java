@@ -9,19 +9,24 @@ public class ImagePresenter {
     private static final double MAXIMUM_ZOOM_FACTOR = 2.0;
     private final ImageDisplay display;
     private Image image;
-    private double zoomFactor = MINIMUM_ZOOM_FACTOR;
+    private double zoomFactor;
 
     public ImagePresenter(ImageDisplay display) {
         this.display = display;
         this.display.onDragging(this::doDrag);
         this.display.onReleasing(this::doRelease);
         this.display.onZooming(this::doZoom);
+        setZoomFactorToMinimum();
     }
 
     private void doDrag(int offset) {
-        this.zoomFactor = MINIMUM_ZOOM_FACTOR;
+        setZoomFactorToMinimum();
         display.clear();
         display.display(image, offset, zoomFactor);
+        displayAdjacentImageWith(offset);
+    }
+
+    private void displayAdjacentImageWith(int offset) {
         if (offset > 0) {
             display.display(image.previous(), offset - display.getWidth(), zoomFactor);
         } else {
@@ -54,8 +59,12 @@ public class ImagePresenter {
 
     private void present() {
         display.clear();
-        zoomFactor = MINIMUM_ZOOM_FACTOR;
+        setZoomFactorToMinimum();
         display.display(image, DEFAULT_OFFSET, zoomFactor);
+    }
+
+    private void setZoomFactorToMinimum() {
+        zoomFactor = MINIMUM_ZOOM_FACTOR;
     }
 
     public void present(Image image) {

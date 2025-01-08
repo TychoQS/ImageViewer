@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Fixing warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,27 +46,27 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Image.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MockMain.executor": "Run",
-    "Application.SwingMain.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tycho/Documents/UNIVERSIDAD/2024-2025 3º/INGENIERIA DEL SOFTWARE II/TRABAJOS PRACTICOS PROYECTOS/image-viewer MVC",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.language",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Image.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MockMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SwingMain.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tycho/Documents/UNIVERSIDAD/2024-2025 3º/INGENIERIA DEL SOFTWARE II/TRABAJOS PRACTICOS PROYECTOS/image-viewer MVC&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tycho\IdeaProjects\ImageViewer\src\main\resources" />
@@ -109,15 +110,8 @@
       <workItem from="1736163653353" duration="3609000" />
       <workItem from="1736202475026" duration="5928000" />
       <workItem from="1736208942503" duration="584000" />
-      <workItem from="1736252585471" duration="7352000" />
-    </task>
-    <task id="LOCAL-00015" summary="ImageDisplay implementation for swing.">
-      <option name="closed" value="true" />
-      <created>1735828833357</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828833357</updated>
+      <workItem from="1736252585471" duration="7441000" />
+      <workItem from="1736340679051" duration="601000" />
     </task>
     <task id="LOCAL-00016" summary="Main implemented">
       <option name="closed" value="true" />
@@ -503,7 +497,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736260359810</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Fixing warnings">
+      <option name="closed" value="true" />
+      <created>1736260710329</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1736260710329</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +540,6 @@
     <MESSAGE value="super call" />
     <MESSAGE value="GUI changes on buttons position and also now buttons don't have background" />
     <MESSAGE value="Now the frame size is accurate to the screen over the taskbar" />
-    <MESSAGE value="Fixing warnings" />
     <MESSAGE value="Minimum Zoom factor to setted." />
     <MESSAGE value="Now the max zoomed image will be the one that fits the viewport" />
     <MESSAGE value="Now images that are not gonna be zoomed, doesn't has the value of height and width changed" />
@@ -546,21 +547,7 @@
     <MESSAGE value="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implementation of a ImageDisplay with the graphical library" />
     <MESSAGE value="Zoom event is now adapted to ImagePresenter, so the capacity to zoom images is a functionality of our application and not something only implemented with the concrete implemetation of a ImageDisplay with the graphical library" />
     <MESSAGE value="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming" />
-    <option name="LAST_COMMIT_MESSAGE" value="We want to support zoom functionality in our application so we need to add these method to the ImageDisplay interface hence all ImageDisplay subclasses give us a form to communicate from the presenter what to do when zooming" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java</url>
-          <line>8</line>
-          <properties class="software.ulpgc.ImageViewer.architecture.view.ImageDisplay" method="onZooming">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Fixing warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing warnings" />
   </component>
 </project>
