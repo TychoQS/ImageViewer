@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Now images that don't fit the area, can be expanded too.">
+    <list default="true" id="7412631f-720c-48fa-888a-bdafa6cb2259" name="Changes" comment="Refactor because the operation on the interface should be &quot;Scrolled&quot; to describe which action triggers the change, like &quot;Dragged&quot; and &quot;Released&quot; instead of &quot;moving image&quot; when we are dragging images with the cursor.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/app/swing/SwingImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/control/ImagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ImageDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/ulpgc/ImageViewer/architecture/view/ViewPort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,23 +110,9 @@
       <workItem from="1736202475026" duration="5928000" />
       <workItem from="1736208942503" duration="584000" />
       <workItem from="1736252585471" duration="7441000" />
-      <workItem from="1736340679051" duration="2517000" />
-    </task>
-    <task id="LOCAL-00018" summary="SwingMain to execute the application">
-      <option name="closed" value="true" />
-      <created>1735828887647</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1735828887647</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Mock implementation of button for change the image (ActionListener not implemented yet)">
-      <option name="closed" value="true" />
-      <created>1735911695818</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1735911695818</updated>
+      <workItem from="1736340679051" duration="3134000" />
+      <workItem from="1736345233621" duration="160000" />
+      <workItem from="1736886668645" duration="672000" />
     </task>
     <task id="LOCAL-00020" summary="Command interface created">
       <option name="closed" value="true" />
@@ -508,7 +490,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736342725019</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Refactor cause the functionality is not really a zoom, is more like enlarging the image">
+      <option name="closed" value="true" />
+      <created>1736343330826</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1736343330826</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Refactor because the operation on the interface should be &quot;Scrolled&quot; to describe which action triggers the change, like &quot;Dragged&quot; and &quot;Released&quot; instead of &quot;moving image&quot; when we are dragging images with the cursor.">
+      <option name="closed" value="true" />
+      <created>1736343470535</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1736343470535</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,8 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added action listener to register the drag and release of the mouse over the image displayed. Also implemented new methods of the interface" />
-    <MESSAGE value="Registered what to do on drag and release to the display. Also adapted de signature of the display method, that was changed." />
     <MESSAGE value="We need a method clear in the interface, cause we need let the Presenter request the display when to clear the paint too." />
     <MESSAGE value="Now the presenter can request the display to clear. Also, when dragging, we need to first clear the paint order to remove the previous images displayed." />
     <MESSAGE value="Implemented clear method" />
@@ -551,6 +547,8 @@
     <MESSAGE value="Fixing warnings" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Now images that don't fit the area, can be expanded too." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now images that don't fit the area, can be expanded too." />
+    <MESSAGE value="Refactor cause the functionality is not really a zoom, is more like enlarging the image" />
+    <MESSAGE value="Refactor because the operation on the interface should be &quot;Scrolled&quot; to describe which action triggers the change, like &quot;Dragged&quot; and &quot;Released&quot; instead of &quot;moving image&quot; when we are dragging images with the cursor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor because the operation on the interface should be &quot;Scrolled&quot; to describe which action triggers the change, like &quot;Dragged&quot; and &quot;Released&quot; instead of &quot;moving image&quot; when we are dragging images with the cursor." />
   </component>
 </project>
